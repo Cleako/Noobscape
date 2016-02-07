@@ -1,0 +1,36 @@
+/**
+ * 476 - Guide @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 7) { // Spoke to the guide
+	NpcTalk("Please proceed through the next door");
+} else
+if(player.getTutorialStatus() == 0) { // Not started the tutorial island yet
+	NpcTalk("Welcome to the world of runescape");
+	NpcTalk("My job is to help newcomers find their feet here");
+	PlayerTalk("Ah good, let's get started");
+	NpcTalk("When speaking to characters such as myself");
+	NpcTalk("Sometimes options will appear in the top left corner of the screen");
+	NpcTalk("left click on one of them to continue the conversation");
+	option = PickOption("So what else can you tell me?", "What controls do I have?", "I want to skip tutorial island");
+	if(option == 1) {
+		NpcTalk("I suggest you go through the door now");
+		NpcTalk("There are several guides and advisors on the island");
+		NpcTalk("Speak to them");
+		NpcTalk("They will teach you about the various aspects of the game");
+		player.setTutorialStatus(7);
+		player.getActionSender().sendTutorialStatus();
+	} else
+	if(option == 2) {
+		NpcTalk("I suggest you talk to the controls guide through the door");
+		player.setTutorialStatus(7);
+		player.getActionSender().sendTutorialStatus();
+	} else
+	if(option == 3) {
+		NpcTalk("You will now be teleported to the mainland");
+		NpcTalk("Good luck");
+		player.setTutorialStatus(100);
+		player.getActionSender().sendTutorialStatus();
+		player.teleport(122, 647, true);
+	}
+}

@@ -1,0 +1,67 @@
+/**
+ * 493 - Wilderness guide @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 72) {
+	NpcTalk("Please proceed through the next door");
+} else
+if(player.getTutorialStatus() == 65) {
+	NpcTalk("Hi are you someone who likes to fight other players?");
+	NpcTalk("Granted it has big risks");
+	NpcTalk("but it can be very rewarding too");
+	option = PickOption("Yes I'm up for a bit of a fight", "I'd prefer to avoid that");
+	if(option == 2) {
+		NpcTalk("Then don't stray into the wilderness");
+		NpcTalk("That is the area of the game where you can attack other players");
+		option2 = PickOption("Where is the wilderness?", "What happens when I die?");
+	} else
+	if(option == 1) {
+		NpcTalk("Then the wilderness is the place for you");
+		NpcTalk("That is the area of the game where you can attack other players");
+		NpcTalk("Be careful though");
+		NpcTalk("Other players can be a lot more dangerous than monsters");
+		NpcTalk("they will be much more persistant in chasing after you");
+		NpcTalk("Especially when they hunt in groups");
+		option2 = PickOption("Where is the wilderness?", "What happens when I die?");
+		if(option2 == 1) {
+			NpcTalk("Once you get into the main playing area head north");
+			NpcTalk("then you will eventually each the wilderness");
+			NpcTalk("The deeper you venture into the wilderness");
+			NpcTalk("The greater the level range of players who can attack you");
+			NpcTalk("So if you go in really deep");
+			NpcTalk("Players much stronger than you can attack yoU");
+			PlayerTalk("What happens when I die?");
+			NpcTalk("normally when you die");
+			NpcTalk("you will lose all of the items in your inventory");
+			NpcTalk("Except the three most valuable");
+			NpcTalk("You never keep stackable items like coins and runes");
+			NpcTalk("which is why it is a good idea to leave things in the bank");
+			NpcTalk("However if you attack another player");
+			NpcTalk("You get a skull above your head for twenty minutes");
+			NpcTalk("If you die with a skull above your head you lose your entire inventory");
+			NpcTalk("Now proceed through the next door");
+			player.setTutorialStatus(72);
+			player.getActionSender().sendTutorialStatus();
+		} else
+		if(option2 == 2) {
+			NpcTalk("normally when you die");
+			NpcTalk("you will lose all of the items in your inventory");
+			NpcTalk("Except the three most valuable");
+			NpcTalk("You never keep stackable items like coins and runes");
+			NpcTalk("which is why it is a good idea to leave things in the bank");
+			NpcTalk("However if you attack another player");
+			NpcTalk("You get a skull above your head for twenty minutes");
+			NpcTalk("If you die with a skull above your head you lose your entire inventory");
+			PlayerTalk("Where is the wilderness?");
+			NpcTalk("Once you get into the main playing area head north");
+			NpcTalk("then you will eventually each the wilderness");
+			NpcTalk("The deeper you venture into the wilderness");
+			NpcTalk("The greater the level range of players who can attack you");
+			NpcTalk("So if you go in really deep");
+			NpcTalk("Players much stronger than you can attack yoU");
+			NpcTalk("Now proceed through the next door");
+			player.setTutorialStatus(72);
+			player.getActionSender().sendTutorialStatus();
+		}
+	}
+}

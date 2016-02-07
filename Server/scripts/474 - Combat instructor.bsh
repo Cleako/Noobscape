@@ -1,0 +1,39 @@
+/**
+ * 474 - Combat instructor @author Yong Min
+ */
+playersExperience = ((player.getExp(0)) + (player.getExp(1)) + (player.getExp(2)));
+
+if((playersExperience == 0) && (player.getWeaponPowerPoints() <= 1) && (!HasItem(4, 1)) && (!HasItem(70, 1)) && (player.getTutorialStatus() == 15)) {
+	NpcTalk("Aha a new recruit");
+	NpcTalk("I'm here to teach you the basics of fighting");
+	NpcTalk("First of all you need weapons");
+	AddItem(70, 1); // Add bronze long sword to the players inventory
+	AddItem(4, 1); // Add wooden shield to the players inventory
+	SendMessage("The instructor gives you a sword and a shield");
+	Wait(2000);
+	NpcTalk("look after these well");
+	NpcTalk("These items will now have appeared in your inventory");
+	NpcTalk("You can access them by selecting the bag icon in the menu bar");
+	NpcTalk("which can be found in the top right hand corner of the screen");
+	NpcTalk("To wield your weapon and shield left click on them within your inventory");
+	NpcTalk("their box will go red to show you are wearing them");
+	SendMessage("when you have done this speak to the combat instructor again");
+} else
+if((playersExperience == 0) && (player.getWeaponPowerPoints() > 1)) { // Player is wielding the sword/shield
+	NpcTalk("Great job! now you see those rats inside the fense?");
+	NpcTalk("Go and kill one then come talk to me");
+} else
+if((playersExperience > 0) && (player.getTutorialStatus() == 22)) {
+	NpcTalk("Well done you're a born fighter");
+	NpcTalk("As you kill things");
+	NpcTalk("Your combat experience will go up");
+	NpcTalk("this experience will slowly cause you to get tougher");
+	NpcTalk("eventually you will be able to take on stronger enemies");
+	NpcTalk("Such as those found in dungeons");
+	NpcTalk("Now continue to the building to the northeast");
+	player.setTutorialStatus(23);
+	player.getActionSender().sendTutorialStatus();
+} else
+if(player.getTutorialStatus() == 23) {
+	NpcTalk("Please proceed through the next door");
+}

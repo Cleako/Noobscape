@@ -1,0 +1,21 @@
+/**
+ * 499 - controls guide @author Yong Min
+ */
+if(player.getTutorialStatus() == 15) { // Spoke to the controls guide
+	NpcTalk("Please proceed through the next door");
+} else {
+	NpcTalk("Hello I'm here to tell you more about the game's controls");
+	NpcTalk("Most of your options and character information");
+	NpcTalk("can be accessed by the menus in the top right corner of the screen");
+	NpcTalk("moving your mouse over the map icon");
+	NpcTalk("which is the second icon from the right");
+	NpcTalk("gives you a view of the area you are in");
+	NpcTalk("clicking on this map is an affective way of walking around");
+	NpcTalk("though if the route is blocked, for example by a closed door");
+	NpcTalk("then your character won't move");
+	NpcTalk("Also notice the compass on the map which may be of help to you");
+	PlayerTalk("Thank you for your help");
+	NpcTalk("Now carry on to speak to the combat instructor");
+	player.setTutorialStatus(15);
+	player.getActionSender().sendTutorialStatus();
+}

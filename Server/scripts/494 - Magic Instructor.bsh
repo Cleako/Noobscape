@@ -1,0 +1,74 @@
+/**
+ * 494 - Magic Instructor @author Yong Min
+ */
+
+magicExperience = player.getExp(6);
+
+if(player.getTutorialStatus() == 80) {
+	NpcTalk("Please proceed through the next door");
+} else
+if((magicExperience > 0) && (player.getTutorialStatus() == 78)) {
+	NpcTalk("Well done");
+	NpcTalk("As you get a higher magic level");
+	NpcTalk("You will be able to cast all sorts of interesting spells");
+	NpcTalk("Now go through the next door");
+	player.setTutorialStatus(80);
+	player.getActionSender().sendTutorialStatus();
+} else
+if(player.getTutorialStatus() == 76) {
+	SendMessage("@yel@chicken: cluck");
+	NpcTalk("Aha a chicken");
+	NpcTalk("An ideal wind strike target");
+	NpcTalk("ok click on the wind strike spell in your spell list");
+	NpcTalk("then click on the chicken to chose it as a target");
+	player.setTutorialStatus(78);
+	player.getActionSender().sendTutorialStatus();
+} else
+if(player.getTutorialStatus() == 74) {
+	PlayerTalk("I don't have all the runes to cast wind strike");
+	NpcTalk("How do you expect to do magic without runes?");
+	NpcTalk("Ok I shall have to provide you with runes");
+	SendMessage("The instructor gives you some runes");
+	AddItem(33, 12);
+	AddItem(35, 8);
+	NpcTalk("Ok look at your spell list now");
+	NpcTalk("You will see you have the runes for the spell");
+	NpcTalk("And it shows up yellow in your list");
+	player.setTutorialStatus(76);
+	player.getActionSender().sendTutorialStatus();
+} else
+if(player.getTutorialStatus() == 72) {
+	NpcTalk("there's good magic potential in this one");
+	NpcTalk("Yes definately something I can work with");
+	option = PickOption("Hmm are you talking about me?", "teach me some magic");
+	if(option == 1) {
+		NpcTalk("Yes that is the one of which I speak");
+		NpcTalk("Ok move your mouse over the book icon on the menu bar");
+		NpcTalk("this is your magic menu");
+		NpcTalk("You will see at level 1 magic you can only cast wind strike");
+		NpcTalk("move your mouse over the wind strike text");
+		NpcTalk("If you look at the bottom of the magic window");
+		NpcTalk("You will see more information about the spell");
+		NpcTalk("runes required for the spell have two numbers over them");
+		NpcTalk("The first number is how many runes you have");
+		NpcTalk("The second is how many runes the spell requires");
+		NpcTalk("Speak to me again when you have checked this");
+		player.setTutorialStatus(74);
+		player.getActionSender().sendTutorialStatus();
+	} else
+	if(option == 2) {
+		NpcTalk("Teacher, yes I am one of them");
+		NpcTalk("Ok move your mouse over the book icon on the menu bar");
+		NpcTalk("this is your magic menu");
+		NpcTalk("You will see at level 1 magic you can only cast wind strike");
+		NpcTalk("move your mouse over the wind strike text");
+		NpcTalk("If you look at the bottom of the magic window");
+		NpcTalk("You will see more information about the spell");
+		NpcTalk("runes required for the spell have two numbers over them");
+		NpcTalk("The first number is how many runes you have");
+		NpcTalk("The second is how many runes the spell requires");
+		NpcTalk("Speak to me again when you have checked this");
+		player.setTutorialStatus(74);
+		player.getActionSender().sendTutorialStatus();
+	}
+}

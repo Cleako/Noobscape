@@ -1,0 +1,14 @@
+<?xml version="1" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Demonik Config</comment>
+	<entry key="version">31</entry>
+	<entry key="ip">216.245.211.162</entry>
+	<entry key="port">43594</entry>
+	<entry key="name">DemonikOnline</entry>
+	<entry key="location">Dallas</entry>
+	<entry key="maxplayers">800</entry>
+	<entry key="servernum">3</entry>
+	<entry key="lsip">10.1.1.145</entry>
+	<entry key="lsport">34522</entry>
+</properties>

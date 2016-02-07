@@ -1,0 +1,28 @@
+/**
+ * 479 - fishing instructor @author Yong Min
+ */
+
+if(HasItem(349, 1)) { // The player has caught a shrimp
+	NpcTalk("Well done you can now continue with the tutorial");
+	NpcTalk("first you can cook the shrimps on my fire here if you like");
+	player.setTutorialStatus(45);
+	player.getActionSender().sendTutorialStatus();
+} else
+if((HasItem(376, 1)) && (!HasItem(349, 1))) { // The player has a net but hasn't caught any shrimp yet
+	NpcTalk("Please come talk to me once you have caught a shrimp");
+} else {
+	PlayerTalk("Hi are you here to tell me how to catch fish?");
+	NpcTalk("Yes that's right, you're a smart one");
+	NpcTalk("Fishing is a useful skill");
+	NpcTalk("You can sell high level fish for lots of money");
+	NpcTalk("Or of course you can cook it and eat it to heal yourself");
+	NpcTalk("Unfortunately you'll have to start off catching shrimps");
+	NpcTalk("Till your fishing level gets higher");
+	NpcTalk("you'll need this");
+	SendMessage("the fishing instructor gives you a somewhat odd looking net");
+	AddItem(376, 1); // Add a net to the players inventory
+	Wait(1000);
+	NpcTalk("Go catch some shrimp");
+	NpcTalk("left click on the sparkling piece of water");
+	NpcTalk("while you have the net in your inventory you might catch some fish");
+}

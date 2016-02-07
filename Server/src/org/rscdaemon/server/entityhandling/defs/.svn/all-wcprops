@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs
+END
+GameObjectDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/GameObjectDef.java
+END
+NPCDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/NPCDef.java
+END
+PrayerDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/PrayerDef.java
+END
+DoorDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/DoorDef.java
+END
+EntityDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/EntityDef.java
+END
+TileDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/TileDef.java
+END
+ItemDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/ItemDef.java
+END
+SpellDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/SpellDef.java
+END

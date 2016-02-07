@@ -1,0 +1,14 @@
+<AdvertDef-array>
+	<AdvertDef>
+		<message>If you need any help, contact a staff member!</message>
+	</AdvertDef>
+	<AdvertDef>
+		<message>Follow the rules or you may find yourself @red@BANNED</message>
+	</AdvertDef>
+	<AdvertDef>
+		<message>Please visit our forums on a daily basis for update information!</message>
+	</AdvertDef>
+	<AdvertDef>
+		<message>Thanks for playing NOOBscape v4.0, %name!</message>
+	</AdvertDef>
+</AdvertDef-array>

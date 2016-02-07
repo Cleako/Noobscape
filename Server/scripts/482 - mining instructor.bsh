@@ -1,0 +1,43 @@
+/**
+ * 482 - mining instructor @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 50) {
+	NpcTalk("Please proceed through the next door");
+} else
+if((HasItem(156, 1)) && (!HasItem(202, 1))) { // The player has been given the pickaxe but not yet obtained an ore
+	NpcTalk("to mine a rock just left click on it");
+	NpcTalk("If you have a pickaxe in your inventory you might get some ore");
+} else
+if((HasItem(156, 1)) && (HasItem(202, 1))) { // The player has been given the pickaxe and has obtained the ore
+	NpcTalk("very good");
+	NpcTalk("If at a later date you find a rock with copper ore");
+	NpcTalk("You can take the copper ore and tin ore to a furnace");
+	NpcTalk("use them on the furnace to make bronze bars");
+	NpcTalk("which you can then either sell");
+	NpcTalk("or use on anvils with a hammer");
+	NpcTalk("To make weapons");
+	NpcTalk("as your mining and smithing levels grow");
+	NpcTalk("you will be able to mine various exciting new metals");
+	NpcTalk("now go through the next door to speak to the bankers");
+	player.setTutorialStatus(50);
+	player.getActionSender().sendTutorialStatus();
+} else
+if((!HasItem(156, 1)) && (player.getTutorialStatus() == 48)) { // The player doesn't yet have a pickaxe but has prospected the rock
+	PlayerTalk("There's tin ore in that rock");
+	NpcTalk("Yes, that's what's in there");
+	NpcTalk("Ok you need to get that tin out of the rock");
+	NpcTalk("First of all you need a pick");
+	NpcTalk("And here we have a pick");
+	SendMessage("The instructor somehow produces a large pickaxe from inside his jacket");
+	SendMessage("The instructor gives you the pickaxe");
+	AddItem(156, 1); // Add a bronze pickaxe to the players inventory
+	NpcTalk("Now hit those rocks");
+} else {
+	PlayerTalk("Good day to you");
+	NpcTalk("hello i'm a veteran miner!");
+	NpcTalk("I'm here to show you how to mine");
+	NpcTalk("If you want to quickly find out what is in a rock you can prospect it");
+	NpcTalk("right click on this rock here");
+	NpcTalk("And select prospect");
+}

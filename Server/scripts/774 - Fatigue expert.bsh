@@ -1,0 +1,36 @@
+/**
+ * 774 - Fatigue expert @author Yong Min
+ */
+
+if((player.getFatigue() > 0) && (player.getTutorialStatus() == 80)) {
+	PlayerTalk("Hi I'm feeling a little tired after all this learning");
+	NpcTalk("Yes when you use your skills you will slowly get fatigued");
+	NpcTalk("If you look on your stats menu you will see a fatigue stat");
+	NpcTalk("When your fatigue reaches 100 percent then you will be very tired");
+	NpcTalk("You won't be able to concentrate enough to gain experience in your skills");
+	NpcTalk("To reduce your fatigue you will need to go to sleep");
+	NpcTalk("Click on the bed to go sleep");
+	NpcTalk("Then follow the instructions to wake up");
+	NpcTalk("When you have done that talk to me again");
+	player.setTutorialStatus(85);
+	player.getActionSender().sendTutorialStatus();
+} else
+if((player.getFatigue() > 0) && (player.getTutorialStatus() == 85)) {
+	NpcTalk("Left click on the bed to go to sleep");
+} else
+if((player.getFatigue() == 0) && (player.getTutorialStatus() == 85)) {
+	NpcTalk("How are you feeling now?");
+	PlayerTalk("I feel much better rested now");
+	NpcTalk("Tell you what, i'll give you this sleeping bag");
+	NpcTalk("So you can rest anywhere");
+	AddItem(1263, 1);
+	SendMessage("The expert hands you a sleeping bag");
+	NpcTalk("This saves you the trouble of finding a bed");
+	NpcTalk("but you will need to sleep longer to restore your fatigue fully");
+	NpcTalk("You can now go through the next door");
+	player.setTutorialStatus(90);
+	player.getActionSender().sendTutorialStatus();
+} else
+if(player.getTutorialStatus() == 90) {
+	NpcTalk("Please proceed through the next door");
+}

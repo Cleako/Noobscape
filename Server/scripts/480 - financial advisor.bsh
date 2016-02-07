@@ -1,0 +1,29 @@
+/**
+ * 480 - financial advisor @author Yong Min
+ */
+if(player.getTutorialStatus() == 37) { // Already spoke to the financial advisor
+	NpcTalk("Please proceed through the next door");
+} else {
+	NpcTalk("Hello there");
+	NpcTalk("I'm your designated financial advisor");
+	PlayerTalk("That's good because I don't have any money at the moment");
+	PlayerTalk("How do I get rich?");
+	NpcTalk("There are many different ways to make money in runescape");
+	NpcTalk("for example certain monsters will drop a bit of loot");
+	NpcTalk("To start with killing men and goblins might be a good idea");
+	NpcTalk("Some higher level monsters will drop quite a lot of treasure");
+	NpcTalk("several of runescapes skills are good money making skills");
+	NpcTalk("two of these skills are mining and fishing");
+	NpcTalk("there are instructors on the island who will help you with this");
+	NpcTalk("using skills and combat to make money is a good plan");
+	NpcTalk("because using a skill also slowly increases your level in that skill");
+	NpcTalk("A high level in a skill opens up many more opportunities");
+	NpcTalk("Some other ways of making money include taking quests and tasks");
+	NpcTalk("You can find these by talking to certain game controlled characters");
+	NpcTalk("Our quest advisors will tell you about this");
+	NpcTalk("Sometimes you will find items lying around");
+	NpcTalk("Selling these to the shops makes some money too");
+	NpcTalk("Now continue through the next door");
+	player.setTutorialStatus(37);
+	player.getActionSender().sendTutorialStatus();
+}

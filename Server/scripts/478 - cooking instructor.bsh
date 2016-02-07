@@ -1,0 +1,57 @@
+/**
+ * 478 - cooking instructor @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 23) { // Not spoke to the cook yet
+	NpcTalk("Looks like you've been fighting");
+	NpcTalk("If you get hurt in a fight");
+	NpcTalk("you will slowly heal");
+	NpcTalk("Eating food will heal you much more quickly");
+	NpcTalk("I'm here to show you some simple cooking");
+	NpcTalk("First you need something to cook");
+	AddItem(133, 1); // Add raw chicken to the players inventory
+	SendMessage("the instructor gives you a piece of meat");
+	Wait(1000);
+	NpcTalk("ok cook it on the range");
+	NpcTalk("To use an item you are holding");
+	NpcTalk("Open your inventory and click on the item you wish to use");
+	NpcTalk("Then click on whatever you wish to use it on");
+	NpcTalk("In this case use it on the range");
+	player.setTutorialStatus(25);
+	player.getActionSender().sendTutorialStatus();
+} else
+if((HasItem(133, 1)) && (player.getTutorialStatus() == 25)) { // Not used the meat on the range yet
+	NpcTalk("use the meat on the range then talk to me");
+} else
+if((HasItem(134, 1)) && (!HasItem(132, 1))) { // The player has burnt the meat
+	PlayerTalk("I burnt the meat");
+	NpcTalk("Well i'm sure you'll get the hang of it soon");
+	NpcTalk("Let's try again");
+	NpcTalk("Here's another piece of meat to cook");
+	AddItem(133, 1); // Add raw chicken to the players inventory
+	SendMessage("the instructor gives you another piece of meat");
+} else
+if((HasItem(132, 1)) && (player.getTutorialStatus() == 31)) { // The player has cooked the meat and spoke to the instructor again
+	NpcTalk("Proceed through the door, I have taught you enough");
+} else
+if((HasItem(132, 1)) && (player.getTutorialStatus() == 25)) {
+	PlayerTalk("I've cooked the meat correctly this time");
+	NpcTalk("very well done");
+	NpcTalk("Now you can tell whether you need to eat or not");
+	NpcTalk("look in your stats menu");
+	NpcTalk("Click on the bar graph icon in the menu bar");
+	NpcTalk("Your stats are low right now");
+	NpcTalk("As you use the various skills, these stats will increase");
+	NpcTalk("If you look at your hits you will see 2 numbers");
+	NpcTalk("The number on the right is your hits when you are at full health");
+	NpcTalk("The number on the left is your current hits");
+	NpcTalk("If the number on the left is lower eat some food to be healed");
+	NpcTalk("There are many other sorts of food you can cook");
+	NpcTalk("As your cooking level increases you will be able to cook even more");
+	NpcTalk("some of these dishes are more complicated to prepare");
+	NpcTalk("If you want to know more about cookery");
+	NpcTalk("You could consult the online manual");
+	NpcTalk("Now proceed through the next door");
+	player.setTutorialStatus(31);
+	player.getActionSender().sendTutorialStatus();
+}

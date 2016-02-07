@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="org/rscdaemon/server/packethandler/client/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/org/rscdaemon/server/packethandler/client"/>
+	<classpathentry kind="lib" path="ant/etc/ant-bootstrap.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-antlr.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-bcel.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-bsf.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-log4j.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-oro.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-regexp.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-apache-resolver.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-commons-logging.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-commons-net.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-jai.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-javamail.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-jdepend.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-jmf.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-jsch.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-junit.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-launcher.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-netrexx.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-nodeps.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-starteam.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-stylebook.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-swing.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-testutil.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-trax.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant-weblogic.jar"/>
+	<classpathentry kind="lib" path="ant/lib/ant.jar"/>
+	<classpathentry kind="lib" path="ant/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="ant/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/hex-string.jar"/>
+	<classpathentry kind="lib" path="lib/jmf.jar"/>
+	<classpathentry kind="lib" path="lib/junit.jar"/>
+	<classpathentry kind="lib" path="lib/mina.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j.jar"/>
+	<classpathentry kind="lib" path="lib/xpp3.jar"/>
+	<classpathentry kind="lib" path="lib/xstream.jar"/>
+	<classpathentry kind="lib" path="rscd.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

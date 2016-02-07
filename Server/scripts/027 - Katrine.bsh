@@ -1,0 +1,91 @@
+/**
+ * 027 - Task Master
+ */
+
+if((player.getTask()) && (player.getRemaining() > 0)) { // The player already has a task
+	NpcTalk("It looks like you already have a task");
+	NpcTalk("Is there anything else I can help you with?");
+	option = PickOption("How does the task system work?", "I want to cancel my task", "No thanks");
+	if(option == 1) { // How does it work?
+		NpcTalk("The task system is quite simple and straight forward");
+		NpcTalk("If you don't have a task, I can give you one");
+		NpcTalk("I will assign you a monster to kill");
+		NpcTalk("and a specific amount of that monster you need to kill");
+		NpcTalk("Once you've killed the specified amount");
+		NpcTalk("Come back to me to collect your reward");
+		option2 = PickOption("What are the possible rewards?", "What if I am too weak to kill my task?");
+	} else
+	if(option == 2) { // Want to cancel
+		if(player.getTaskPoints() < 3) { // Doesn't have enough points
+			NpcTalk("You don't have enough task points to cancel your task");
+			PlayerTalk("How many task points are needed?");
+			NpcTalk("You need a minimum of 3 task points to cancel your task");
+			PlayerTalk("Ok thank you");
+			NpcTalk("Please come back when you have more task points!");
+		} else
+		if(player.getTaskPoints() >= 3) { // Has enough points
+			player.setTaskPoints(player.getTaskPoints() -3);
+			player.getActionSender().sendTaskPoints();
+			player.setTask(false);
+			player.getActionSender().sendTaskStatus();
+			player.setRemaining(0);
+			NpcTalk("Your current task has been cancelled successfully");
+		}
+	} else
+	if(option == 3) { // No thanks
+		NpcTalk("Ok suit yourself");
+	}
+} else
+if(!player.getTask()) { // Player doesn't have a task
+	NpcTalk("Hello there");
+	NpcTalk("I am the task master");
+	NpcTalk("How can I help you, " + player.getUsername() + "?");
+	option3 = PickOption("I would like a task", "How does the task system work?");
+	if(option3 == 1) { // Give the player a task
+		NpcTalk("I will now give you a randomized task");
+		NpcTalk("depending on your combat level");
+		player.setRandomNPC(player);
+		NpcTalk("Ah! This task will suit you just fine!");
+		NpcTalk("The task you have been assigned is " + player.getTaskNPC());
+		NpcTalk("You will have to kill " + player.getRemaining() + " of that monster");
+		PlayerTalk("What will my reward be?");
+		NpcTalk("You will be rewarded with " + player.getRandomCash() + " coins");
+		NpcTalk("and " + player.getRandomXp() + " experience token");
+		NpcTalk("Please come back once you have completed your task!");
+		player.getActionSender().sendMoneyTask();
+		player.getActionSender().sendTaskStatus();
+		player.getActionSender().sendExperienceReward();
+		player.getActionSender().sendCashReward();
+		player.getActionSender().sendItemReward();
+	} else
+	if(option3 == 2) { // How does it work
+		NpcTalk("The task system is quite simple and straight forward");
+		NpcTalk("If you don't have a task, I can give you one");
+		NpcTalk("I will assign you a monster to kill");
+		NpcTalk("and a specific amount of that monster you need to kill");
+		NpcTalk("Once you've killed the specified amount");
+		NpcTalk("Come back to me to collect your reward");
+	}
+} else
+if((player.getTask()) && (player.getRemaining() <= 0)) { // Player has completed their task
+	NpcTalk("Congratulations, it looks like you've completed your task!");
+	NpcTalk("Would you like to collect your reward?");
+	option4 = PickOption("Yes, I want my reward", "No, i'll get it later");
+	if(option4 == 1) { // Yes
+		player.setTask(false);
+		AddItem(10, player.getRandomCash());
+		AddItem(player.getRandomItem(), 1);
+		AddItem(1329, player.getRandomXp());
+		player.getActionSender().sendInventory();
+		player.setTaskPoints(player.getTaskPoints() +1);
+		player.getActionSender().sendTaskPoints();
+		player.setCompletedTasks(player.getCompletedTasks() +1);
+		player.getActionSender().sendCompletedTasks();
+		player.getActionSender().sendTaskStatus();
+		player.getActionSender().sendExperienceReward();
+		player.getActionSender().sendCashReward();
+		player.getActionSender().sendItemReward();
+		NpcTalk("Your reward has been successfully added to your inventory");
+		NpcTalk("Please come back when you want another task!");
+	}
+}

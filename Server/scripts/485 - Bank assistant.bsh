@@ -1,0 +1,32 @@
+/**
+ * 485 - Bank assistant @author Yong Min
+ */
+
+playerIsMale = (player.isMale() ? "sir" : "miss");
+
+if(player.getTutorialStatus() == 50) {
+	NpcTalk("Hello welcome to the bank of runescape");
+	NpcTalk("You can deposit your items in banks");
+	NpcTalk("This allows you to own much more equipment");
+	NpcTalk("Than can be fitted in your inventory");
+	NpcTalk("It will also keep your items safe");
+	NpcTalk("So you won't lose them when you die");
+	NpcTalk("You can withdraw deposited items from any bank in the world");
+	PlayerTalk("Can I access my bank account please?");
+	NpcTalk("Certainly " + playerIsMale);
+	player.setAccessingBank(true);
+	player.getActionSender().showBank();
+	player.setTutorialStatus(57);
+	player.getActionSender().sendTutorialStatus();
+} else {
+	NpcTalk("Hello welcome to the bank of runescape");
+	NpcTalk("You can deposit your items in banks");
+	NpcTalk("This allows you to own much more equipment");
+	NpcTalk("Than can be fitted in your inventory");
+	NpcTalk("It will also keep your items safe");
+	NpcTalk("So you won't lose them when you die");
+	NpcTalk("You can withdraw deposited items from any bank in the world");
+	NpcTalk("Now proceed through the next door");
+	PlayerTalk("Okay thankyou for your help");
+	NpcTalk("Not a problem");
+}

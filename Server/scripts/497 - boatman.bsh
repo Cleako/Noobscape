@@ -1,0 +1,10 @@
+/**
+ * 497 - boatman @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 100) {
+	NpcTalk("Congratulations! You have completed tutorial island");
+	NpcTalk("You will now be teleported to the mainland");
+	NpcTalk("Good luck traveller");
+	player.teleport(122, 647, true);
+}

@@ -1,0 +1,65 @@
+/**
+ * 496 - Community instructor @author Yong Min
+ */
+if(player.getTutorialStatus() == 100) {
+	NpcTalk("Please proceed through the next door");
+} else
+if(player.getTutorialStatus() == 90) {
+	NpcTalk("You're almost ready to go out into the main game area");
+	NpcTalk("When you get out there");
+	NpcTalk("You will be able to interact with thousands of other players");
+	option = PickOption("How can I communicate with other players?", "Are there rules on ingame behaviour?");
+	if(option == 1) {
+		NpcTalk("typing in the game window will bring up chat");
+		NpcTalk("Which players in the nearby area will be able to see");
+		NpcTalk("If you want to speak to a particular friend anywhere in the game");
+		NpcTalk("You will be able to select the smiley face icon");
+		NpcTalk("then click to add a friend, and type in your friend's name");
+		NpcTalk("If that player is logged in on the same world as you");
+		NpcTalk("their name will go green");
+		NpcTalk("If they are logged in on a different world their name will go yellow");
+		NpcTalk("clicking on their name will allow you to send a message");
+		option2 = PickOption("Are there rules on ingame behaviour?", "goodbye then");
+	} else
+	if(option == 2) {
+		NpcTalk("Yes you should read the rules of conduct on our front page");
+		NpcTalk("To make sure you do nothing to get yourself banned");
+		NpcTalk("but as general guide always try to be courteous to people in game");
+		NpcTalk("Remember the people in the game are real people somewhere");
+		NpcTalk("With real feelings");
+		NpcTalk("If you go round being abusive or causing trouble");
+		NpcTalk("your character could quickly be the one in trouble");
+		option3 = PickOption("How can I communicate with other players?", "goodbye then");
+	}
+	if(option2 == 1) {
+		NpcTalk("Yes you should read the rules of conduct on our front page");
+		NpcTalk("To make sure you do nothing to get yourself banned");
+		NpcTalk("but as general guide always try to be courteous to people in game");
+		NpcTalk("Remember the people in the game are real people somewhere");
+		NpcTalk("With real feelings");
+		NpcTalk("If you go round being abusive or causing trouble");
+		NpcTalk("your character could quickly be the one in trouble");
+		option3 = PickOption("How can I communicate with other players?", "goodbye then");
+	} else
+	if(option2 == 2) {
+		NpcTalk("Good luck");
+		player.setTutorialStatus(100);
+		player.getActionSender().sendTutorialStatus();
+	}
+	if(option3 == 1) {
+		NpcTalk("typing in the game window will bring up chat");
+		NpcTalk("Which players in the nearby area will be able to see");
+		NpcTalk("If you want to speak to a particular friend anywhere in the game");
+		NpcTalk("You will be able to select the smiley face icon");
+		NpcTalk("then click to add a friend, and type in your friend's name");
+		NpcTalk("If that player is logged in on the same world as you");
+		NpcTalk("their name will go green");
+		NpcTalk("If they are logged in on a different world their name will go yellow");
+		NpcTalk("clicking on their name will allow you to send a message");
+	} else
+	if(option3 == 2) {
+		NpcTalk("Good luck");
+		player.setTutorialStatus(100);
+		player.getActionSender().sendTutorialStatus();
+	}
+}

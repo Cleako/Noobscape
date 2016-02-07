@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras
+END
+ObjectFishDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ObjectFishDef.java
+END
+ItemDropDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemDropDef.java
+END
+CerterDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/CerterDef.java
+END
+ItemDartTipDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemDartTipDef.java
+END
+ItemUnIdentHerbDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemUnIdentHerbDef.java
+END
+ItemGemDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemGemDef.java
+END
+ItemArrowHeadDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemArrowHeadDef.java
+END
+ReqOreDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ReqOreDef.java
+END
+ObjectWoodcuttingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ObjectWoodcuttingDef.java
+END
+CertDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/CertDef.java
+END
+ItemBowStringDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemBowStringDef.java
+END
+ItemHerbDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemHerbDef.java
+END
+ItemSmeltingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemSmeltingDef.java
+END
+ItemSmithingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemSmithingDef.java
+END
+ItemWieldableDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemWieldableDef.java
+END
+ItemCookingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemCookingDef.java
+END
+ObjectMiningDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ObjectMiningDef.java
+END
+ItemLogCutDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemLogCutDef.java
+END
+ItemHerbSecond.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemHerbSecond.java
+END
+ItemCraftingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ItemCraftingDef.java
+END
+FiremakingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/FiremakingDef.java
+END
+ObjectFishingDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/defs/extras/ObjectFishingDef.java
+END

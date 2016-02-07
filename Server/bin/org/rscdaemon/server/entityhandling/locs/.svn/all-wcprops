@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/locs
+END
+ItemLoc.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/locs/ItemLoc.java
+END
+GameObjectLoc.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/locs/GameObjectLoc.java
+END
+NPCLoc.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/server/entityhandling/locs/NPCLoc.java
+END

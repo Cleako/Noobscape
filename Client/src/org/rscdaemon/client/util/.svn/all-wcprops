@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/client/util
+END
+PersistenceManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/client/util/PersistenceManager.java
+END
+DataConversions.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/client/util/DataConversions.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/rscd/!svn/ver/1/src/org/rscdaemon/client/util/Config.java
+END

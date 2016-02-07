@@ -1,0 +1,25 @@
+/**
+ * 489 - Quest advisor @author Yong Min
+ */
+
+if(player.getTutorialStatus() == 65) { // Already spoke to the advisor
+	NpcTalk("Please proceed through the next door");
+} else {
+	NpcTalk("Greetings traveller");
+	NpcTalk("If you're interested in a bit of adventure");
+	NpcTalk("I can recommend going on a good quest");
+	NpcTalk("There are many secrets to be uncovered");
+	NpcTalk("And wrongs to be set right");
+	NpcTalk("If you talk to the various characters in the game");
+	NpcTalk("Some of them will give you quests");
+	PlayerTalk("What sort of quests are there to do?");
+	NpcTalk("If you select the bar graph in the menu bar");
+	NpcTalk("And then select the quests tabs");
+	NpcTalk("You will see a list of quests");
+	NpcTalk("quests you have completed will show up in green");
+	NpcTalk("You can only do each quest once");
+	PlayerTalk("thank you for the advice");
+	NpcTalk("good questing traveller");
+	player.setTutorialStatus(65);
+	player.getActionSender().sendTutorialStatus();
+}
