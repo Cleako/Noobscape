@@ -19,7 +19,7 @@ public class ClanHandler {
 	}
 	
 	public void loadClans() {
-		File folder = new File(".\\clans\\");
+		File folder = new File(".//clans//");
 		if(!folder.exists()) 
 			System.out.println("folder null");
 		int numberOfClans = 0;
@@ -88,11 +88,11 @@ public class ClanHandler {
 				owner.getActionSender().sendMessage("You must wait 2 hours before creating a new clan");
 				return false;
 			}
-			File f = new File(".\\clans\\" + name + ".cfg");
+			File f = new File(".//clans//" + name + ".cfg");
 			if(f.exists()) {
 				return false;
 			}
-			copy(new File("clans\\Template"), f);
+			copy(new File("clans//Template"), f);
 			Properties p = new Properties();
 			FileInputStream fis;
 			

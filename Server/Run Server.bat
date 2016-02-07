@@ -1,5 +1,1 @@
-@echo off
-TITLE NOOBscape
-set PATH=%PATH%;ant\bin
-ant runserver
-exit
+java -jar "dist/Noobscape_Server.jar"
